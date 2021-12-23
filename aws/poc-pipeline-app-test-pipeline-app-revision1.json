@@ -1,0 +1,128 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:eu-west-2:375298772095:task-definition/poc-pipeline-app-test-pipeline-app:1",
+    "containerDefinitions": [
+        {
+            "name": "pipeline-app",
+            "image": "375298772095.dkr.ecr.eu-west-2.amazonaws.com/poc-pipeline-app/pipeline-app@sha256:53a8dbde513dc4ea755a4403d4d6f1d12dbfc5a84edc4363c7e2a7473f7e4361",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [
+                {
+                    "name": "COPILOT_SERVICE_DISCOVERY_ENDPOINT",
+                    "value": "test.poc-pipeline-app.local"
+                },
+                {
+                    "name": "COPILOT_LB_DNS",
+                    "value": "poc-p-Publi-T4FHIPY9ZX36-1114956353.eu-west-2.elb.amazonaws.com"
+                },
+                {
+                    "name": "COPILOT_APPLICATION_NAME",
+                    "value": "poc-pipeline-app"
+                },
+                {
+                    "name": "COPILOT_SERVICE_NAME",
+                    "value": "pipeline-app"
+                },
+                {
+                    "name": "COPILOT_ENVIRONMENT_NAME",
+                    "value": "test"
+                }
+            ],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/copilot/poc-pipeline-app-test-pipeline-app",
+                    "awslogs-region": "eu-west-2",
+                    "awslogs-stream-prefix": "copilot"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        }
+    ],
+    "family": "poc-pipeline-app-test-pipeline-app",
+    "taskRoleArn": "arn:aws:iam::375298772095:role/poc-pipeline-app-test-pipeline-app-TaskRole-3FBGLVX24MMW",
+    "executionRoleArn": "arn:aws:iam::375298772095:role/poc-pipeline-app-test-pipeline-app-ExecutionRole-R88QAWZWIMQG",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "registeredAt": "2021-12-23T22:35:40.169Z",
+    "registeredBy": "arn:aws:sts::375298772095:assumed-role/poc-pipeline-app-test-CFNExecutionRole/AWSCloudFormation",
+    "tags": [
+        {
+            "key": "copilot-application",
+            "value": "poc-pipeline-app"
+        },
+        {
+            "key": "copilot-environment",
+            "value": "test"
+        },
+        {
+            "key": "copilot-service",
+            "value": "pipeline-app"
+        }
+    ]
+}
