@@ -21,6 +21,28 @@ env:
                                                # containerDefinitions section of your task definition
 
 jobs:
+
+  job1: 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Check environment vars are working
+        run: echo "The aws region is:${{env.AWS_REGION}}"
+
+      - name: Check environment vars are working
+        run: echo "The aws repository is:${{env.ECR_REPOSITORY}}"  
+
+      - name: Check environment vars are working
+        run: echo "The aws service is:${{env.ECS_SERVICE}}"  
+
+      - name: Check environment vars are working
+        run: echo "The aws cluster is:${{env.ECS_CLUSTER}}"  
+
+      - name: Check environment vars are working
+        run: echo "The aws task definition is:${{env.ECS_TASK_DEFINITION}}"  
+
+      - name: Check environment vars are working
+        run: echo "The aws container name is:${{env.MY_CONTAINER_NAME}}"  
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
