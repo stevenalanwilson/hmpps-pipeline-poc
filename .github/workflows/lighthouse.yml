@@ -1,0 +1,15 @@
+name: Lighthouse CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Lighthouse
+      uses: foo-software/lighthouse-check-action@master
+      with:
+        urls: 'http://poc-p-publi-t4fhipy9zx36-1114956353.eu-west-2.elb.amazonaws.com'
