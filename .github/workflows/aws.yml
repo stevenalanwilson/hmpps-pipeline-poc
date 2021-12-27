@@ -74,5 +74,5 @@ jobs:
           wait-for-service-stability: true
       - name: Log Build
         # replace TAG by the latest tag in the repository
-        uses: ros-tooling/action-cloudwatch-metrics@ ${{ github.ref }}
+        uses: ros-tooling/action-cloudwatch-metrics@main
         if: always()  # Need to run to log the workflow failure
