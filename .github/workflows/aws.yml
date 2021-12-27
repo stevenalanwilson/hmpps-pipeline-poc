@@ -72,7 +72,6 @@ jobs:
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true
-      - name: Log Build
-        # replace TAG by the latest tag in the repository
-        uses: ros-tooling/action-cloudwatch-metrics@main
+      - name: Post Amazon Cloudwatch Metrics
+        uses: ros-tooling/action-cloudwatch-metrics@0.0.5
         if: always()  # Need to run to log the workflow failure
