@@ -76,5 +76,5 @@ jobs:
         env:
           TAG: ${{ github.ref }}
         # replace TAG by the latest tag in the repository
-        uses: ros-tooling/action-cloudwatch-metrics${{ env.TAG }}
+        uses: ros-tooling/action-cloudwatch-metrics@ ${{ env.TAG }}
         if: always()  # Need to run to log the workflow failure
