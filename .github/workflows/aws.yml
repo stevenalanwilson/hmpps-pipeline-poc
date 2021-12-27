@@ -73,6 +73,8 @@ jobs:
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true
       - name: Log Build
+        env:
+          IMAGE_TAG: ${{ github.sha }}
         # replace TAG by the latest tag in the repository
-        uses: ros-tooling/action-cloudwatch-metrics@${{ github.sha }}
+        uses: ros-tooling/action-cloudwatch-metrics@$IMAGE_TAG
         if: always()  # Need to run to log the workflow failure
