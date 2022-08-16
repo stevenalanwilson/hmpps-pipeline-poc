@@ -12,4 +12,4 @@ jobs:
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
-        urls: 'http://poc-p-publi-t4fhipy9zx36-1114956353.eu-west-2.elb.amazonaws.com'
+        urls: 'http://poc-p-publi-1llxsb1l67bjt-266798615.eu-west-2.elb.amazonaws.com'
